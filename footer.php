@@ -57,6 +57,5 @@
 			$('#returnOnTop').fadeIn();
 	});
 </script>
-<?php @include('stats.php'); ?>
 </body>
 </html>
