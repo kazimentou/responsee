@@ -13,12 +13,12 @@
 	
 	<meta property="og:title" content="<?php $plxShow->pageTitle(); ?>" />
 	<meta property="og:type" content="article">
-	<meta property="og:site_name" content="<?php echo $plxMotor->aConf['title']; ?>" />
-	<meta property="og:description" content="<?php echo $plxMotor->aConf['meta_description']; ?>" />
+	<meta property="og:site_name" content="<?= $plxMotor->aConf['title']; ?>" />
+	<meta property="og:description" content="<?= $plxMotor->aConf['meta_description']; ?>" />
 	<?php if($plxShow->mode() <> "article") { ?>
  	<meta property="og:image" content="<?php $plxShow->racine(); ?>img_facebook.jpg" />
 	<?php } else { ?>
- 	<meta property="og:image" content="<?php echo $plxShow->artThumbnail('#img_url'); ?>" />
+ 	<meta property="og:image" content="<?= $plxShow->artThumbnail('#img_url'); ?>" />
 	<?php } ?>
 	<meta property="og:url" content="<?php $plxShow->racine(); ?>" />
 	<meta property="og:locale" content="fr_FR" />	

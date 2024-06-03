@@ -1,10 +1,10 @@
-<?php include(dirname(__FILE__).'/header.php'); ?>
-<?php include(dirname(__FILE__).'/sidebar.php'); ?>
+<?php include 'header.php'; ?>
+<?php include 'sidebar.php'; ?>
 
 			<div class="s-12 l-9">
 				<div class="box">
 					<div class="line">
-						<h2><?php echo plxDate::formatDate($plxShow->plxMotor->cible, $plxShow->lang('ARCHIVES').' #month #num_year(4)') ?></h2>
+						<h2><?= plxDate::formatDate($plxShow->plxMotor->cible, $plxShow->lang('ARCHIVES').' #month #num_year(4)') ?></h2>
 					</div>
 				
 					<section>
@@ -45,4 +45,4 @@
 					</section>
 				</div>
 
-<?php include(dirname(__FILE__).'/footer.php'); ?>
+<?php include 'footer.php'; ?>

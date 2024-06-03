@@ -2,14 +2,14 @@
 	<?php if($plxShow->plxMotor->plxRecord_coms): ?>
 	<div class="line">
 		<div class="s-12 l-12" id="comments">
-				<h2><?php echo $plxShow->artNbCom(); ?></h2>
+				<h2><?= $plxShow->artNbCom(); ?></h2>
 				<?php while($plxShow->plxMotor->plxRecord_coms->loop()): # On boucle sur les commentaires ?>
 				<div class="line">
 				<div id="<?php $plxShow->comId(); ?>" class="comment s-12 l-12 <?php $plxShow->comLevel(); ?>">
 					<blockquote id="com-<?php $plxShow->comIndex(); ?>">
 						<div class="content_com type-<?php $plxShow->comType(); ?>">
 							<p class="info_comment">
-								<a class="num-com" href="<?php $plxShow->ComUrl(); ?>" title="#<?php echo $plxShow->plxMotor->plxRecord_coms->i+1 ?>"><i class="icon-link"></i></a>
+								<a class="num-com" href="<?php $plxShow->ComUrl(); ?>" title="#<?= $plxShow->plxMotor->plxRecord_coms->i+1 ?>"><i class="icon-link"></i></a>
 								<i class="icon-calendar"></i><time datetime="<?php $plxShow->comDate('#num_year(4)-#num_month-#num_day #hour:#minute'); ?>"><?php $plxShow->comDate('#day #num_day #month #num_year(4) &#64; #hour:#minute'); ?></time>
 								<i class="icon-user"></i><?php $plxShow->comAuthor('link'); ?>
 								<?php $plxShow->lang('SAID'); ?>
@@ -46,7 +46,7 @@
 
 			<?php if($plxShow->plxMotor->aConf['capcha']): ?>
 			<p>
-				<label for="id_rep"><?php echo $plxShow->lang('ANTISPAM_WARNING') ?></label>
+				<label for="id_rep"><?= $plxShow->lang('ANTISPAM_WARNING') ?></label>
 				<?php $plxShow->capchaQ(); ?> :
 				<input id="id_rep" name="rep" type="text" size="2" maxlength="1" />
 			</p>
